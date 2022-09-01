@@ -9,6 +9,8 @@
 ##### Output: [0,1]
 ##### Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].
 
+
+#### Version 1
 ```
 class Solution {
     public int[] twoSum(int[] nums, int target) {
@@ -35,6 +37,7 @@ class Solution {
 
 ![image](https://user-images.githubusercontent.com/97871497/184320133-b5043120-cfb6-4511-a028-2d3d57737834.png)
 
+#### Version 2
 ```
 class Solution {
     public int[] twoSum(int[] nums, int target) {
@@ -58,4 +61,25 @@ class Solution {
 
 ```
 ![image](https://user-images.githubusercontent.com/97871497/184582489-69423514-36ff-47b2-8658-ab172d891cd0.png)
+
+#### Version 3
+```
+class Solution {
+    public int[] twoSum(int[] nums, int target) {
+        int[] ans = new int[2];
+        HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
+        for(int i = 0; i <= nums.length-1 ; i++){
+            if(map.containsKey(target - nums[i])){
+                ans[0] = i;
+                ans[1] = map.get(target - nums[i]);
+            }else{
+                map.put(nums[i], i);
+            }
+        }
+        return ans;
+    }
+}
+```
+![image](https://user-images.githubusercontent.com/97871497/187901166-e294d635-85dd-4273-938a-5120e895a2d3.png)
+
 
