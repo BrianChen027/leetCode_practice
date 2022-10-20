@@ -13,7 +13,7 @@
 #####    Input: prices = [1,2,3,4,5]
 #####    Output: 4
 
-
+### Normal Adding Version
 ```
 class Solution {
     public int maxProfit(int[] prices) {
@@ -33,4 +33,23 @@ class Solution {
 ```
 
 ![image](https://user-images.githubusercontent.com/97871497/187979960-0c5e66c4-2d2e-4e1c-9739-c24c89e8bb7f.png)
+
+### Dynamic Porgraming Version
+```
+class Solution {
+    public int maxProfit(int[] prices) {
+        int[][] dp = new int[prices.length][2];
+        dp[0][0] = 0;
+        dp[0][1] = -prices[0];
+        for(int i = 1 ; i < prices.length ; i++){
+            dp[i][0] = Math.max(dp[i-1][0], dp[i-1][1] + prices[i]);
+            dp[i][1] = Math.max(dp[i-1][1], dp[i-1][0] - prices[i]);
+        }
+        return dp[prices.length-1][0];
+    }
+}
+```
+
+![image](https://user-images.githubusercontent.com/97871497/196905120-8f13e91b-4cfa-4e20-b0cf-a559b97b5ef1.png)
+
 
