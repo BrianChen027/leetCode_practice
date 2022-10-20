@@ -20,7 +20,7 @@
 #####    Input: turnedOn = 9
 #####    Output: []
 
-### Reminder: String.format("%d", number)
+### Reminder: String.format("%d", number) : Integer.bitCount(int number)
 ##### %d ：正常輸出十進制數 。
 ##### %Yd：十進制數，輸出 Y 位。如果本身大於 Y 位，正常輸出。
 ##### %XYd：十進制數，輸出 Y 位，不足 Y 位就補 X 。如果本身大於 Y 位，正常輸出。
