@@ -43,7 +43,7 @@ class Solution {
     }
 }
 ```
-![image](https://user-images.githubusercontent.com/97871497/196935133-47d91362-225b-418b-8032-2dbec6f5b619.png)
+![image](https://user-images.githubusercontent.com/97871497/196938222-3112eff8-2606-4c03-b134-8b7f777f843e.png)
 
 ### Dynamic Programing Version
 ```
