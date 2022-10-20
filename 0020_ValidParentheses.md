@@ -17,7 +17,8 @@
 #####    Input: s = "(]"
 #####    Output: false
 
-
+### Reminder: Stack
+#### boolean empty() / Object peek( )看頂部 / Object pop( )返回頂部並移除 / Object push(Object element)放入頂部 / int search(Object element)
 ```
 class Solution {
     public boolean isValid(String s) {
