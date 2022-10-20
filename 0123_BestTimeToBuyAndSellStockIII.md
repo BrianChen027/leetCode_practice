@@ -27,6 +27,12 @@ class Solution {
         dp[1] = 0;
         dp[2] = -prices[0];
         dp[3] = 0;
+        //把buy當作支出 也就是"負數"
+        //sell是把現在金額去補足之前的buy空缺
+        //ex: 第一天buy 3 --> -3
+        //ex: 第二天的價格是 5 --> sell --> -3 + 5 = 2 --> 賺2
+        //ex: 但要是第二天價格是 2 --> sell --> -3 + 2 = -1 --> 虧 --> 不sell
+        //dp[2] --> 把第一次買賣賺的餘額去購買第二次 --> (dp[1] - price) + price --> 賺
         for(int i = 1 ; i <= prices.length ; i++){
             dp[0] = Math.max(dp[0], -prices[i-1]);
             dp[1] = Math.max(dp[1], dp[0] + prices[i-1]);
