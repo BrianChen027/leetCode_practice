@@ -22,8 +22,7 @@ class Solution {
         for(int i:prices){
             if(buyDay > i){
                 buyDay = i;
-            }
-            if(i - buyDay > 0){
+            }else if(i - buyDay > 0){
                 total += (i - buyDay);
                 buyDay = i;
             }
