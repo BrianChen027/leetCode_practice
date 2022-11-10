@@ -1,4 +1,4 @@
-# 121. Best Time to Buy and Sell Stock
+# 135. Candy
 
 #### There are n children standing in a line. Each child is assigned a rating value given in the integer array ratings.
 #### You are giving candies to these children subjected to the following requirements:
